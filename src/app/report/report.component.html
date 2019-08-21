@@ -1,0 +1,21 @@
+<!--Lists all names in the database-->
+<h1>REPORT</h1>
+    
+<div fxLayout="column" >  
+  <table>
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>First Name</th>
+        <th>Last Name</th>
+      </tr>
+    </thead>
+    <tbody>    
+      <tr *ngFor="let item of people; let i=index" >
+        <td>{{i}}</td>
+        <td>{{item.fName}}</td>
+        <td>{{item.lName}}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>

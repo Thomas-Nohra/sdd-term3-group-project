@@ -1,0 +1,88 @@
+<h1>Edit Licence</h1>
+<mat-accordion>
+  <mat-expansion-panel>
+    <mat-expansion-panel-header>Licence Details</mat-expansion-panel-header>
+    <mat-form-field>
+      <mat-select placeholder="Licence Class" [(value)]="selected" multiple required>
+        <mat-option value="c">C (Car)</mat-option>
+        <mat-option value="lrn">LRN (Learner)</mat-option>
+      </mat-select>
+    </mat-form-field>
+    <br>
+    <mat-form-field>
+      <input matInput type="number" placeholder="Licence No." required>
+    </mat-form-field>
+    <br>
+    <mat-form-field>
+      <input matInput type="number" placeholder="Card Number" required>
+    </mat-form-field>
+    <br>
+    <mat-form-field>
+      <input matInput [matDatepicker]="expiryPicker" placeholder="Expiry Date" required>
+      <mat-datepicker-toggle matSuffix [for]="expiryPicker"></mat-datepicker-toggle>
+      <mat-datepicker #expiryPicker startView="year" [startAt]="startDate"></mat-datepicker>
+    </mat-form-field>
+  </mat-expansion-panel>
+  <mat-expansion-panel>
+    <mat-expansion-panel-header>Personal Details</mat-expansion-panel-header>
+    <mat-form-field>
+      <input matInput type="text" placeholder="First Name" required>
+    </mat-form-field>
+    <br>
+    <mat-form-field>
+      <input matInput type="text" placeholder="Middle Name(s)">
+    </mat-form-field>
+    <br>
+    <mat-form-field>
+      <input matInput type="text" placeholder="Last Name" required>
+    </mat-form-field>
+    <br>
+    <mat-form-field>
+      <input matInput [matDatepicker]="dobPicker" placeholder="Date of Birth" required>
+      <mat-datepicker-toggle matSuffix [for]="dobPicker"></mat-datepicker-toggle>
+      <mat-datepicker #dobPicker startView="year" [startAt]="startDate"></mat-datepicker>
+    </mat-form-field>
+    <br>
+    <mat-form-field>
+      <input matInput type="text" placeholder="Address Line 1" required>
+    </mat-form-field>
+    <br>
+    <mat-form-field>
+      <input matInput type="text" placeholder="Address Line 2">
+    </mat-form-field>
+    <br>
+    <mat-form-field>
+      <input matInput type="text" placeholder="Suburb" required>
+    </mat-form-field>
+    <br>
+    <mat-form-field>
+      <mat-select placeholder="State" [(value)]="selected" required>
+        <mat-option value="nsw">NSW</mat-option>
+        <mat-option value="wa">WA</mat-option>
+        <mat-option value="sa">SA</mat-option>
+        <mat-option value="act">ACT</mat-option>
+        <mat-option value="nt">NT</mat-option>
+        <mat-option value="tas">TAS</mat-option>
+        <mat-option value="qld">QLD</mat-option>
+      </mat-select>
+    </mat-form-field>
+    <br>
+    <mat-form-field>
+      <input matInput type="number" placeholder="Postcode" required>
+    </mat-form-field>
+  </mat-expansion-panel>
+</mat-accordion>
+<br>
+<button mat-raised-button color="primary">Confirm Details</button><br>
+
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
